@@ -4,9 +4,9 @@ body {
 }
 
 canvas {
-    canvas {
-        border: 1px solid red;
-    }
+    border: 1px solid red;
+    height: 650px;
+    width: 600px;
 }
 
 .game-intro {
@@ -40,5 +40,5 @@ body button {
 
 #game-board {
     float: left;
-    padding: 20px 0px;
+    padding: 20px 2px;
 }
