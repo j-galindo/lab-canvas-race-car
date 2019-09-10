@@ -59,11 +59,12 @@ window.onload = function() {
 
     // testing the car object
     let car = {
-        x: 225,
-        y: 500,
-        moveLeft: function() { this.x -= 25 },
-        moveRight: function() { this.x += 25 }
-    }
+            x: 225,
+            y: 500,
+            moveLeft: function() { this.x -= 25 },
+            moveRight: function() { this.x += 25 }
+        }
+        // more changes to this test
 
     function drawCar(car) {
         var canvas = document.getElementById('road');
