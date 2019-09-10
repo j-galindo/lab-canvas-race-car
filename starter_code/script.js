@@ -86,3 +86,5 @@ window.onload = function() {
 
 
 }
+
+// adding the movement to the car
