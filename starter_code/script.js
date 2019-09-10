@@ -1,6 +1,5 @@
 window.onload = function() {
-
-    function draw() {
+    function boardgame() {
         let canvas = document.getElementById("racecar");
         let ctx = canvas.getContext('2d');
         ctx.fillStyle = "green";
@@ -20,7 +19,6 @@ window.onload = function() {
         ctx.clearRect(450, 0, 10, 650);
         ctx.fillStyle = "white";
         ctx.fillRect(450, 0, 10, 650);
-
 
         ctx.fillStyle = "white";
         ctx.clearRect(250, 0, 10, 5);
@@ -57,17 +55,30 @@ window.onload = function() {
         ctx.clearRect(250, 150, 10, 5);
 
     }
+    boardgame();
 
+    // testing the car object
+    let car = {
+        x: 225,
+        y: 500,
+        moveLeft: function() { this.x -= 25 },
+        moveRight: function() { this.x += 25 }
+    }
 
-
-    draw();
+    function drawCar(car) {
+        var canvas = document.getElementById('road');
+        var ctx = canvas.getContext('2d');
+        var img = new Image();
+        imgScale = 1 / 2;
+        img.onload = function() {
+            ctx.drawImage(img, car.x, car.y, 100 * imgScale, 100);
+        };
+        img.src = './images/car.png';
+    }
 
     document.getElementById("start-button").onclick = function() {
         startGame();
     };
-
-
-
 
     function startGame() {
 
